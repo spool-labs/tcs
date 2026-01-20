@@ -1,6 +1,4 @@
-// Tapedrive Schema
-// This schema defines the core data structures for the Tapedrive
-// decentralized storage network.
+// This schema defines the example data structures for a decentralized storage network.
 
 package tapedrive;
 
