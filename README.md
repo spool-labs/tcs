@@ -1,4 +1,5 @@
-# TCS (Tape Canonical Serialization)
+# TCS
+(Tape Canonical Serialization)
 
 A high-performance, schema-based binary serialization format for Tapedrive.
 
@@ -24,7 +25,7 @@ Unlike Protocol Buffers, TCS is non-self-describing—the schema is not embedded
 
 Create a `schema.tcs` file:
 
-```
+```proto
 package myapp;
 
 enum Status {
