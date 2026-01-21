@@ -3,7 +3,7 @@ resolver = "2"
 members = ["schema", "compiler", "cli", "bench", "example"]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT"
 description = "TCS (Tape Canonical Serialization) - A schema-based binary serialization format for Tapedrive"
@@ -14,8 +14,8 @@ categories = ["encoding", "data-structures"]
 
 [workspace.dependencies]
 # Local workspace members
-tcs-schema = { version = "0.1.0", path = "schema" }
-tcs-compiler = { version = "0.1.0", path = "compiler" }
+tcs-schema = { version = "0.1.1", path = "schema" }
+tcs-compiler = { version = "0.1.1", path = "compiler" }
 
 # Third-party crates
 lazy_static = "1.5.0"

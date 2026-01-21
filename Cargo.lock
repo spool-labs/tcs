@@ -749,7 +749,7 @@ dependencies = [
 
 [[package]]
 name = "tcs-bench"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bcs",
  "criterion",
@@ -763,7 +763,7 @@ dependencies = [
 
 [[package]]
 name = "tcs-cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap",
  "tcs-compiler",
@@ -771,7 +771,7 @@ dependencies = [
 
 [[package]]
 name = "tcs-compiler"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "lazy_static",
  "regex",
@@ -781,7 +781,7 @@ dependencies = [
 
 [[package]]
 name = "tcs-example"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "wincode",
  "wincode-derive",
@@ -789,7 +789,7 @@ dependencies = [
 
 [[package]]
 name = "tcs-schema"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "thiserror"
