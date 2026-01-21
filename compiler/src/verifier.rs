@@ -1,6 +1,6 @@
 //! Schema verification for TCS
 
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 use tcs_schema::{Definition, DefinitionKind, Schema};
 
 use crate::error::TcsError;
@@ -16,7 +16,7 @@ pub const NATIVE_TYPES: &[&str] = &[
 
 /// Verify a schema for correctness
 pub fn verify_schema(schema: &Schema) -> Result<(), TcsError> {
-    let mut defined_types: Vec<String> = NATIVE_TYPES.iter().map(|s| s.to_string()).collect();
+    let mut defined_types: HashSet<String> = NATIVE_TYPES.iter().map(|s| s.to_string()).collect();
     let mut definitions_map: HashMap<String, &Definition> = HashMap::new();
 
     // 1) Check duplicate / reserved type names
@@ -33,7 +33,7 @@ pub fn verify_schema(schema: &Schema) -> Result<(), TcsError> {
                 quote(&def.name)
             )));
         }
-        defined_types.push(def.name.clone());
+        defined_types.insert(def.name.clone());
         definitions_map.insert(def.name.clone(), def);
     }
 
@@ -77,7 +77,7 @@ pub fn verify_schema(schema: &Schema) -> Result<(), TcsError> {
         }
 
         // Check field_id uniqueness and bounds
-        let mut values = Vec::new();
+        let mut values = HashSet::new();
         for field in &def.fields {
             if values.contains(&field.field_id) {
                 return Err(TcsError::VerificationError(format!(
@@ -98,7 +98,7 @@ pub fn verify_schema(schema: &Schema) -> Result<(), TcsError> {
                     def.fields.len()
                 )));
             }
-            values.push(field.field_id);
+            values.insert(field.field_id);
         }
     }
 
