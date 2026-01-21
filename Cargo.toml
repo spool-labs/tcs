@@ -7,8 +7,10 @@ version = "0.1.0"
 edition = "2021"
 license = "MIT"
 description = "TCS (Tape Canonical Serialization) - A schema-based binary serialization format for Tapedrive"
-repository = "https://github.com/tapedrive/tcs"
+repository = "https://github.com/spool-labs/tcs"
+homepage = "https://tape.network"
 keywords = ["serialization", "binary", "canonical", "tapedrive", "blockchain"]
+categories = ["encoding", "data-structures"]
 
 [workspace.dependencies]
 # Local workspace members

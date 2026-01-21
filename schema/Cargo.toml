@@ -3,6 +3,10 @@ name = "tcs-schema"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+categories.workspace = true
 description = "Schema AST types for TCS (Tape Canonical Serialization)"
 
 [dependencies]

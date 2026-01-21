@@ -4,6 +4,7 @@ version.workspace = true
 edition.workspace = true
 license.workspace = true
 description = "Example usage of TCS (Tape Canonical Serialization)"
+publish = false
 
 [dependencies]
 wincode = { workspace = true }
